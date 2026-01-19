@@ -1,0 +1,108 @@
+/* OPCIÓN: UNAM Contraste (Oro en cabeceras de sección) */
+:root {
+    --unam-blue: #002B7A;
+    --unam-gold: #D4AF37; /* Un oro metálico más brillante */
+    --text-color: #333;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--text-color);
+    background-color: #eef1f5; /* Gris azulado muy claro */
+    margin: 0;
+}
+
+header.main-header {
+    background: linear-gradient(to right, #002B7A, #001f55); /* Degradado azul */
+    color: white;
+    padding: 3rem 0;
+    text-align: center;
+}
+
+.container { max-width: 900px; margin: 0 auto; padding: 20px; }
+
+h1 { font-weight: 700; }
+.subtitle { 
+    background-color: var(--unam-gold);
+    color: #001f55;
+    padding: 2px 10px;
+    border-radius: 4px;
+    display: inline-block;
+    font-weight: bold;
+    font-size: 0.9rem;
+    margin-top: 10px;
+}
+
+section {
+    background: white;
+    padding: 0; /* Quitamos padding del contenedor para que el header toque los bordes */
+    border-radius: 8px;
+    overflow: hidden; /* Para que las esquinas redondeadas funcionen con el header de color */
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    border: 1px solid #ddd;
+}
+
+/* El título de cada sección tiene fondo */
+section h2, section h3 {
+    background-color: var(--unam-blue);
+    color: var(--unam-gold);
+    margin: 0;
+    padding: 15px 25px;
+    font-size: 1.3rem;
+    border-bottom: 3px solid var(--unam-gold);
+}
+/* Ajuste para h3 dentro de secciones grandes */
+section h3 {
+    background-color: white;
+    color: var(--unam-blue);
+    padding: 0 25px;
+    margin-top: 20px;
+    border-bottom: none;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Contenido dentro de las secciones */
+section p, section ul, section div { padding: 0 25px 20px 25px; }
+
+/* Grid */
+.grid-2-col { display: flex; gap: 20px; flex-wrap: wrap; }
+.grid-2-col > section { flex: 1; }
+
+/* Tabla */
+.table-responsive { padding: 20px; }
+table { width: 100%; border-collapse: collapse; }
+thead th { 
+    background-color: #fff; 
+    color: var(--unam-blue); 
+    border-bottom: 2px solid var(--unam-gold);
+}
+td { border-bottom: 1px solid #eee; padding: 10px; }
+
+a { color: var(--unam-blue); font-weight: bold; text-decoration: underline decoration-color(var(--unam-gold)); }
+a:hover { background-color: var(--unam-gold); color: #000; text-decoration: none; }
+
+/* Estilo para el span del título principal */
+.highlight { color: var(--unam-gold); }
+
+footer { text-align: center; padding: 30px; color: #666; }
+
+blockquote {
+    background: #eef2f5;
+    padding: 15px;
+    border-radius: 4px;
+    color: #555;
+    text-align: center;
+    font-size: 1.1rem;
+}
+
+/* --- CÓDIGO DE LOGOS (Incluido por seguridad) --- */
+.header-flex { display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+.header-text { flex: 1; text-align: center; }
+.logo { height: 90px; width: auto; }
+@media (max-width: 768px) {
+    .header-flex { flex-direction: column; }
+    .logo { height: 70px; margin-bottom: 10px; }
+}
