@@ -106,3 +106,19 @@ blockquote {
     .header-flex { flex-direction: column; }
     .logo { height: 70px; margin-bottom: 10px; }
 }
+
+/* --- ESTILOS PARA EL PÓSTER --- */
+.poster-container {
+    text-align: center; /* Centra la imagen */
+    margin: 20px 0;
+    padding: 15px;
+}
+
+.poster-img {
+    max-width: 100%; /* Evita que la imagen se salga de la pantalla en celulares */
+    height: auto;
+    max-height: 800px; /* Evita que sea exageradamente alta en monitores grandes */
+    border-radius: 8px; /* Bordes ligeramente redondeados */
+    box-shadow: 0 6px 15px rgba(0, 43, 122, 0.2); /* Una sombra con un toque azul UNAM */
+    border: 2px solid #C49C15; /* Un marco delgado color Oro UNAM */
+}
